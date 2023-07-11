@@ -4,6 +4,14 @@ import pandas as pd
 
 
 st.set_page_config(layout='wide')
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 col1,col2=st.columns(2)
 
 def structure(heading,description,images,sourcecode):

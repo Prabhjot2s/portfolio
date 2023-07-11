@@ -2,6 +2,13 @@ import streamlit as st
 from send_email import send_email
 st.header("Contact Me")
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 with st.form(key='form'):
     emalfrom=st.text_input("Your Email address",placeholder="Enter your Email Address")
     subject=st.selectbox(label='What do you want to discuss', options=['Job position', 'Freelancing', 'Other'])
