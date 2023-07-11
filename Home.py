@@ -3,7 +3,6 @@ import pandas as pd
 
 
 
-
 st.set_page_config(layout='wide')
 col1,col2=st.columns(2)
 
@@ -32,7 +31,7 @@ st.write("Below You can find some of the apps I have built in Python. Feel free 
 
 col3,empty_col,col4=st.columns([1.5,0.5,1.5])
 
-data=pd.read_csv("data.csv",sep=";")
+data=pd.read_csv("data.csv",sep=",")
 
 
 with col3:
